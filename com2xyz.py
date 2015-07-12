@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+#					#
+#	Author: Edson Silva		#
+#	Site: http://edsonlead.com	#
+#					#
+#########################################
 import re
 
 filen = "Opt.180.com"

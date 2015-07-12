@@ -1,4 +1,9 @@
 #!/usr/bin/env python
+#					#
+#	Author: Edson Silva		#
+#	Site: http://edsonlead.com 	#
+#					#
+#########################################
 import Image
 import ImageDraw
 
