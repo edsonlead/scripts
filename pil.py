@@ -7,9 +7,9 @@
 import Image
 import ImageDraw
 
-img = "image.jpg"
+nameImg = "image.jpg"
 newImg = "1m4g3.jpg"
-img = Image.open(img)
+img = Image.open(nameImg)
 width = 140
 height = 140
 size = width,height
@@ -30,18 +30,18 @@ def to_thumbnail(newImg,(size)):
 def to_antialias((size)):
 	newImg = img
 	newImg.thumbnail((size),Image.ANTIALIAS)
-	newName = "antialias-%s.jpg" %(img)
+	newName = "antialias-%s" %(nameImg)
 	newImg.save(newName)
 
 def to_rotate(angle):
 	imgRotate = img.rotate(angle)
-	newName = "%s-rotate-%d.jpg" %(img,angle)
+	newName = "%s-rotate-%d.jpg" %(nameImg[:-4],angle)
 	imgRotate.save(newName)
 
 def to_write(position,phrase):
 	draw = ImageDraw.Draw(img)
 	draw.text(position,phrase)
-	newName = "%s-write.jpg" %(img)
+	newName = "%s-write.jpg" %(nameImg[:-4])
 	img.save(newName)
 
 info_image(img)
